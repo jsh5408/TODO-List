@@ -10,11 +10,11 @@ function onLoginSubmit(event) {
     const username = loginInput.value;
     localStorage.setItem(USERNAME_KEY, username);
     loginForm.classList.add(HIDDEN_CLASSNAME);
-    savedUsername(username);
+    paintGreetings(username);
 }
 
 function paintGreetings(username) {
-    greeting.innerText = `Hello ${username}`;
+    greeting.innerText = `${username}`;
     greeting.classList.remove(HIDDEN_CLASSNAME);
 }
 
